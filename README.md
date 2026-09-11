@@ -2,7 +2,7 @@
 
 Goal: Explain command-based structure and design a simple behavior (example: run a shooter, or drive) using a subsystem + command.
 
-Time: About 45–60 minutes
+Time: About 45-60 minutes
 
 You will learn:
 
@@ -91,19 +91,19 @@ Button  Command uses Subsystem(s).
 
 Work with a mentor. Pick something small:
 
-Example A — Intake in
+Example A - Intake in
 
 • Subsystem: Acquisition
 
 • Command: while held, run intake rollers; on end, stop
 
-Example B — Spin up shooter
+Example B - Spin up shooter
 
 • Subsystem: Shooter
 
 • Command: start motors in initialize, stop in end
 
-Example C — Drive slowly
+Example C - Drive slowly
 
 • Subsystem: DriveTrain
 
@@ -133,9 +133,9 @@ Then implement with mentor review before deploying.
 
 ### Common mistakes
 
-1. Forgetting addRequirements —— two commands fight over one motor
+1. Forgetting addRequirements -- two commands fight over one motor
 
-2. Forgetting to stop in end — motor keeps running after the button
+2. Forgetting to stop in end - motor keeps running after the button
 
 3. Putting all logic in Robot.teleopPeriodic instead of a command
 
@@ -145,21 +145,21 @@ Then implement with mentor review before deploying.
 
 ## Try it yourself
 
-Use the team robot project. Written design is required; coding Challenge 4 needs a mentor.
+Use the team robot project. Written design is required; coding Challenge 4 - a mentor.
 
-### Challenge 1 â€” Spot the pieces
+### Challenge 1 - Spot the pieces
 
 Name one subsystem and one command from the team repo. What hardware vs what action?
 
-### Challenge 2 â€” Read a command
+### Challenge 2 - Read a command
 
 Read a shoot/intake style command. When does `initialize` run vs `end`? What does `addRequirements` list?
 
-### Challenge 3 â€” Design on paper
+### Challenge 3 - Design on paper
 
 Design a `StopAllCommand` or `SlowDriveCommand` with `initialize` / `execute` / `end` / `isFinished`.
 
-### Challenge 4 â€” With mentor
+### Challenge 4 - With mentor
 
 Implement a tiny command, bind it to a test button, run sim or a safe robot test.
 

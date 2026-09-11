@@ -163,27 +163,26 @@ Design a `StopAllCommand` or `SlowDriveCommand` with `initialize` / `execute` / 
 
 Implement a tiny command, bind it to a test button, run sim or a safe robot test.
 
-### Check your understanding
+## Check your understanding
 
-1. What is the difference between a subsystem and a command?
+1. <details>
+     <summary>What is the difference between a subsystem and a command?</summary>
+     Subsystem = robot part; command = action that uses part(s).
+   </details>
+2. <details>
+     <summary>Who calls `execute()` over and over?</summary>
+     The command scheduler (from `robotPeriodic`).
+   </details>
+3. <details>
+     <summary>Why call `addRequirements`?</summary>
+     So the scheduler knows which hardware this command owns and can cancel conflicts.
+   </details>
+4. <details>
+     <summary>Why stop motors in `end`?</summary>
+     So the robot does not keep moving/spinning after the command stops.
+   </details>
 
-2. Who calls execute() over and over?
-
-3. Why call addRequirements?
-
-4. Why stop motors in end?
-
-Answers
-
-1. Subsystem = robot part; command = action that uses part(s).
-
-2. The command scheduler (from robotPeriodic).
-
-3. So the scheduler knows which hardware this command owns and can cancel conflicts.
-
-4. So the robot does not keep moving/spinning after the command stops.
-
-### You made it
+## You made it
 
 You started with println and finished at command-based robot structure. Keep practicing Java in small programs, and read team code in small chunks (one subsystem at a time).
 
